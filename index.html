@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title> CMSC150 Project</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Angular Material style sheet -->
+  		<link rel="stylesheet" href="vendors/angular-material/angular-material.css">
+	</head>
+
+	<body ng-app="main" ng-c>
+
+		<md-toolbar class="md-primary md-hue-2">
+			<div class="md-toolbar-tools">
+				<a ui-sref="ultimate"> <md-button> Ultimate Optimizer </md-button> </a>
+				<a ui-sref="diet"> <md-button> Dietizer </md-button> </a>
+				<span flex></span>
+			</div>
+		</md-toolbar>
+
+      	<div class="body" ui-view></div>
+
+		
+
+		<!-- Importing Dependencies -->
+		<script type="text/javascript" src="vendors/angular/angular.js"></script>
+		<script type="text/javascript" src="vendors/angular-ui-router/release/angular-ui-router.js"></script>
+		<script type="text/javascript" src="vendors/angular-animate/angular-animate.js"></script>
+		<script type="text/javascript" src="vendors/angular-aria/angular-aria.js"></script>
+		<script type="text/javascript" src="vendors/angular-messages/angular-messages.js"></script>
+		<script type="text/javascript" src="vendors/angular-material/angular-material.js"></script>
+		<script type="text/javascript" src="vendors/angular-material-icons/angular-material-icons.js"></script>
+
+		<!-- Custom Imports -->
+		<script type="text/javascript" src="src/js/main-module.js"></script>
+		<script type="text/javascript" src="src/js/main-routes.js"></script>
+		<!-- <script type="text/javascript" src="assets/js/controllers/todo-ctrl.js"></script> -->
+
+	</body>
+</html>
