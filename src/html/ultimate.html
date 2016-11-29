@@ -1,0 +1,42 @@
+<div class="body" ng-cloak layout="column" layout-wrap>
+	<md-content layout-padding>
+		<h1> Ultimate Optimzer </h1>
+		<p> Instructions: Input chuchubels into the cheparlu. </p>
+
+		<div class="ultimate-input">
+			<form>
+				<h2> Input: </h2>
+				<!-- objective function -->
+				<md-input-container class="md-block">
+					<label> Objective Function </label>
+					<input required ng-model="objfx"/>
+					<!-- <div ng-messages="todoForm.title.$error"> -->
+						<!-- <div ng-message="required"> This is required. </div> -->
+					<!-- </div> -->
+				</md-input-container>
+
+				<!-- message -->
+				<md-input-container class="md-block">
+					<label> List of Constraints </label>
+					<input ng-model="constraints"/>
+				</md-input-container>
+			</form>
+
+			<div layout="row" layout-sm="column" layout-wrap>
+				<md-button class="md-raised md-primary" ng-click="" aria-label="">  MAXIMIZE  
+				</md-button>
+				<md-button class="md-raised md-primary" ng-click="" aria-label="">  MINIMIZE  
+				</md-button>
+				<span flex> </span>
+				<md-button class="md-raised md-primary" ng-click="" aria-label="">  CLEAR  
+				</md-button>
+			</div>
+		</div>
+
+		<div class="ultimate-output">
+			<h2> Output: </h2>
+			<!-- <p> {{ objfx }} </p> -->
+			<!-- <p> {{ constraints }} </p> -->
+		</div>
+	</md-content>
+</div>
