@@ -22,18 +22,25 @@
 				// controller: 'TodoCtrl'
 				controller: function($scope) {}
 			})
-			.state('home.ultimate', {
+			.state('ultimate', {
 				url: '/ultimate',
 				templateUrl: 'src/html/ultimate.html',
 				// template: '<div layout-padding> <h1> Ultimate Optimizer </h1> </div>',
 				controller: function($scope) {}
 			})
-			.state('home.diet', {
+			.state('diet', {
 				url: '/diet',
 				templateUrl: 'src/html/diet.html',
 				// template: '<div layout-padding> <h1> Dietizer </h1> </div>',
 				// controller: 'DietCtrl'
-				controller: function($scope) {}
+				controller: function($scope, $http) {
+					$http.get('src/js/foods.json').success(function(data) {
+						$scope.foods = data;
+						console.log(data);
+						console.log($scope.foods);
+					});
+				},
+				controllerAs: 'DietCtrl'
 			})
 			.state('about', {
 				url: '/about',

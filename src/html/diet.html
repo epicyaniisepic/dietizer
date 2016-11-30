@@ -1,5 +1,5 @@
 <div class="body" ng-cloak layout-wrap>
-	<md-content>
+	<md-content class="md-padding">
 		<h2> Dietizer - Optimizes your food servings into a cheap price. </h2>
 		<p> Instructions: Click the chuchubels that you like and poof! Coco Crunch. </p>
 
@@ -11,7 +11,6 @@
 							<span class="md-headline"> food name </span>
 							<span class="md-subhead"> price per serving ; serving price </span>
 						</md-card-title-text>
-
 					</md-card-title>
 					<md-card-content layout="row" layout-align="space-between">
 						<!-- <img class="md-media-xl md-card-image" src="src/images/banana.jpg"> -->
@@ -31,9 +30,11 @@
 			</md-content>
 		</div>
 		
-		<!-- <div ng-controller="importFoods" layout="row">
-
-		</div> -->
+		<div ng-repeat="food in foods">
+			<p> {{food.Foods}} </p>
+			<p> {{food.PricePerServing}} </p>
+			<p> {{food.ServingSize}} </p>
+		</div>
 
 
 		<div class="diet-output md-padding">
