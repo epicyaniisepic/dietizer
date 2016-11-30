@@ -17,28 +17,28 @@
 			})
 			.state('home', {
 				url: '/home',
-				// templateUrl: 'assets/views/todo.html',
-				template: '<div layout-padding> <h1> Home </h1> </div>',
+				templateUrl: 'src/html/home.html',
+				// template: '<div layout-padding> <h1> Home </h1> </div>',
 				// controller: 'TodoCtrl'
+				controller: function($scope) {}
+			})
+			.state('home.ultimate', {
+				url: '/ultimate',
+				templateUrl: 'src/html/ultimate.html',
+				// template: '<div layout-padding> <h1> Ultimate Optimizer </h1> </div>',
+				controller: function($scope) {}
+			})
+			.state('home.diet', {
+				url: '/diet',
+				templateUrl: 'src/html/diet.html',
+				// template: '<div layout-padding> <h1> Dietizer </h1> </div>',
+				// controller: 'DietCtrl'
 				controller: function($scope) {}
 			})
 			.state('about', {
 				url: '/about',
 				templateUrl: 'src/html/about.html',
 				// template: '<div layout-padding> <h1> About </h1> </div>',
-				// controller: 'TodoCtrl'
-				controller: function($scope) {}
-			})
-			.state('ultimate', {
-				url: '/ultimate',
-				templateUrl: 'src/html/ultimate.html',
-				// template: '<div layout-padding> <h1> Ultimate Optimizer </h1> </div>',
-				controller: function($scope) {}
-			})
-			.state('diet', {
-				url: '/diet',
-				templateUrl: 'src/html/diet.html',
-				// template: '<div layout-padding> <h1> Dietizer </h1> </div>',
 				// controller: 'TodoCtrl'
 				controller: function($scope) {}
 			})

@@ -1,14 +1,43 @@
-<div class="body" ng-cloak layout="column" layout-wrap>
-	<md-content layout-padding>
-		<h1> Dietizer - Optimizes your food servings into a cheap price. </h1>
+<div class="body" ng-cloak layout-wrap>
+	<md-content>
+		<h2> Dietizer - Optimizes your food servings into a cheap price. </h2>
 		<p> Instructions: Click the chuchubels that you like and poof! Coco Crunch. </p>
 
-		<div class="diet-input">
-			<h2> Input: </h2>
-		</div>
+		<div layout="row">
+			<md-content class="diet-input md-padding" flex="25">
+				<md-card>
+					<md-card-title>
+						<md-card-title-text>
+							<span class="md-headline"> food name </span>
+							<span class="md-subhead"> price per serving ; serving price </span>
+						</md-card-title-text>
 
-		<div class="diet-output">
-			<h2> Output: </h2>
+					</md-card-title>
+					<md-card-content layout="row" layout-align="space-between">
+						<!-- <img class="md-media-xl md-card-image" src="src/images/banana.jpg"> -->
+						<md-card-actions layout="column">
+							<md-button class="md-icon-button" aria-label="Favorite">
+								<md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+							</md-button>
+							<md-button class="md-icon-button" aria-label="Settings">
+								<md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+							</md-button>
+							<md-button class="md-icon-button" aria-label="Share">
+								<md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+							</md-button>
+	          			</md-card-actions>
+					</md-card-content>
+				</md-card>
+			</md-content>
+		</div>
+		
+		<!-- <div ng-controller="importFoods" layout="row">
+
+		</div> -->
+
+
+		<div class="diet-output md-padding">
+			<h3> Output: </h3>
 		</div>
 	</md-content>
 </div>
