@@ -31,16 +31,8 @@
 			.state('diet', {
 				url: '/diet',
 				templateUrl: 'src/html/diet.html',
-				// template: '<div layout-padding> <h1> Dietizer </h1> </div>',
 				controller: 'DietCtrl'
-				// controller: function($scope, $http) {
-				// 	$http.get('src/js/foods.json').success(function(data) {
-				// 		$scope.foods = data;
-				// 		console.log(data);
-				// 		console.log($scope.foods);
-				// 	});
-				// },
-				// controllerAs: 'DietCtrl'
+				// controller: function($scope) {}
 			})
 			.state('about', {
 				url: '/about',
@@ -51,7 +43,7 @@
 			})
 			.state('references', {
 				url: '/references',
-				// templateUrl: 'assets/views/todo.html',
+				// templateUrl: 'src/html/references.html',
 				template: '<div layout-padding> <h1> References </h1> </div>',
 				// controller: 'TodoCtrl'
 				controller: function($scope) {}
