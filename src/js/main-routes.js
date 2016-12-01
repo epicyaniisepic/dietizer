@@ -32,6 +32,7 @@
 				url: '/diet',
 				templateUrl: 'src/html/diet.html',
 				controller: 'DietCtrl'
+				// template: '<div layout-padding> <h1> Dietizer </h1> </div>',
 				// controller: function($scope) {}
 			})
 			.state('about', {
