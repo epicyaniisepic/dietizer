@@ -1,0 +1,34 @@
+[
+	{
+		"Foods":"Frozen Broccoli",
+		"PricePerServing":"$0.16",
+		"ServingSize":"10 Oz Pkg",
+		"Calories":73.8,
+		"Cholesterol":0,
+		"Total_Fat":0.8,
+		"Sodium mg":68.2,
+		"Carbohydrates":13.6,
+		" Dietary_Fiber":8.5,
+		"Protein":8,
+		"Vit_A":5867.4,
+		"Vit_C":160.2,
+		"Calcium":159,
+		"Iron":2.3
+	},
+	{
+		"Foods":"Raw Carrots",
+		"PricePerServing":"$0.07",
+		"ServingSize":"1/2 Cup Shredded",
+		"Calories":23.7,
+		"Cholesterol":0,
+		"Total_Fat":0.1,
+		"Sodium":19.2,
+		"Carbohydrates":5.6,
+		"Dietary_Fiber":1.6,
+		"Protein":0.6,
+		"Vit_A":15471,
+		"Vit_C":5.1,
+		"Calcium":14.9,
+		"Iron":0.3
+	}
+]

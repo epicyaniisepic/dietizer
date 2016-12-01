@@ -1,47 +1,55 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title> CMSC150 Project</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html ng-app="countryApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular.js JSON Fetching Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="vendors/angular/angular.js"></script>
+    <script>
+      var countryApp = angular.module('countryApp', []);
+      countryApp.controller('CountryCtrl', function ($scope, $http){
+        $http.get('foods copy.json').success(function(data) {
+          // $scope.countries = data;
+          $scope.foods = data;
+        });
+      });
+    </script>
+  </head>
+  <body ng-controller="CountryCtrl">
+    <h2>Angular.js JSON Fetching Example</h2>
+    <table>
+      <tr>
+        <th> Name </th>
+        <th> PricePerServing </th>
+        <th> ServingSize </th>
+        <th> Cal </th>
+        <th> Cho </th>
+        <th> Fat </th>
+        <th> Sodium </th>
+        <th> Carb </th>
+        <th> Fiber </th>
+        <th> Pro </th>
+        <th> A </th>
+        <th> C </th>
+        <th> Calc </th>
+        <th> Iron </th>
+      </tr>
+      <tr ng-repeat="food in foods | orderBy: 'code' ">
+        <td>{{food.Foods}}</td>
+        <td>{{food.PricePerServing}}</td>
+        <td>{{food.ServingSize}}</td>
+        <td>{{food.Calories}}</td>
+        <td>{{food.Cholesterol}}</td>
+        <td>{{food.Total_Fat}}</td>
+        <td>{{food.Sodium}}</td>
+        <td>{{food.Carbohydrates}}</td>
+        <td>{{food.DietaryFiber}}</td>
+        <td>{{food.Protein}}</td>
+        <td>{{food.Vit_A}}</td>
+        <td>{{food.Vit_C}}</td>
+        <td>{{food.Calcium}}</td>
+        <td>{{food.Iron}}</td>
 
-		<!-- Angular Material style sheet -->
-  		<link rel="stylesheet" href="vendors/angular-material/angular-material.css">
-	</head>
-
-	<body ng-app="main">
-
-		<md-toolbar class="md-primary md-hue-2">
-			<div class="md-toolbar-tools">
-				<a ui-sref="home"> <md-button> Home </md-button> </a>
-				<a ui-sref="about"> <md-button> About </md-button> </a>
-				<a ui-sref="ultimate"> <md-button> Ultimate Optimizer </md-button> </a>
-				<a ui-sref="diet"> <md-button> Dietizer </md-button> </a>
-				<a ui-sref="references"> <md-button> References </md-button> </a>
-			</div>
-		</md-toolbar>
-
-      	<div class="body" ui-view></div>
-
-		
-
-		<!-- Importing Dependencies -->
-		<script type="text/javascript" src="vendors/angular/angular.js"></script>
-		<script type="text/javascript" src="vendors/angular-ui-router/release/angular-ui-router.js"></script>
-		<script type="text/javascript" src="vendors/angular-animate/angular-animate.js"></script>
-		<script type="text/javascript" src="vendors/angular-aria/angular-aria.js"></script>
-		<script type="text/javascript" src="vendors/angular-messages/angular-messages.js"></script>
-		<script type="text/javascript" src="vendors/angular-material/angular-material.js"></script>
-		<script type="text/javascript" src="vendors/angular-material-icons/angular-material-icons.js"></script>
-
-		<script type="text/javascript" src="vendors/mathjs/dist/math.js"></script>
-
-		<!-- Custom Imports -->
-		<script type="text/javascript" src="src/js/main-module.js"></script>
-		<script type="text/javascript" src="src/js/main-routes.js"></script>
-		<script type="text/javascript" src="assets/js/controllers/diet-ctrl.js"></script>
-
-	</body>
+      </tr>
+    </table>
+  </body>
 </html>

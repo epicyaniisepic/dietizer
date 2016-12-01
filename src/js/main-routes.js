@@ -35,8 +35,8 @@
 				// controller: 'DietCtrl'
 				controller: function($scope, $http) {
 					$http.get('src/js/foods.json').success(function(data) {
-						$scope.foods = data;
-						console.log(data);
+						$scope.foods = data[0];
+						console.log(data[0]);
 						console.log($scope.foods);
 					});
 				},
