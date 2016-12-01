@@ -10,23 +10,12 @@
 			.otherwise('/');
 
 		$stateProvider
-			.state('/', {
-				url:'/',
-				// template: '<div layout-padding> <h1> Landing Page </h1> </div>'
-				template: '<div layout-padding> <h1> Landing / Home </h1> </div>',
-			})
-			.state('home', {
-				url: '/home',
-				templateUrl: 'src/html/home.html',
-				// template: '<div layout-padding> <h1> Home </h1> </div>',
-				// controller: 'TodoCtrl'
-				controller: function($scope) {}
-			})
 			.state('ultimate', {
 				url: '/ultimate',
 				templateUrl: 'src/html/ultimate.html',
 				// template: '<div layout-padding> <h1> Ultimate Optimizer </h1> </div>',
-				controller: function($scope) {}
+				// controller: function($scope) {}
+				controller: 'UltCtrl'
 			})
 			.state('diet', {
 				url: '/diet',

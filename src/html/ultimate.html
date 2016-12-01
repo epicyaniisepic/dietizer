@@ -1,4 +1,4 @@
-<div class="body" ng-cloak layout="column" layout-wrap>
+<div class="body" ng-cloak layout="column" layout-wrap ng-controller="UltCtrl">
 	<md-content class="md-padding">
 		<h2> Ultimate Optimzer </h2>
 		<p> Instructions: Input chuchubels into the cheparlu. </p>
@@ -10,25 +10,22 @@
 				<md-input-container class="md-block">
 					<label> Objective Function </label>
 					<input required ng-model="objfx"/>
-					<!-- <div ng-messages="todoForm.title.$error"> -->
-						<!-- <div ng-message="required"> This is required. </div> -->
-					<!-- </div> -->
 				</md-input-container>
 
-				<!-- message -->
+				<!-- contraints -->
 				<md-input-container class="md-block">
 					<label> List of Constraints </label>
-					<input ng-model="constraints"/>
+					<input required ng-model="constraints"/>
 				</md-input-container>
 			</form>
 
 			<div layout="row" layout-sm="column" layout-wrap>
-				<md-button class="md-raised md-primary" ng-click="" aria-label="">  MAXIMIZE  
+				<md-button class="md-raised md-primary" ng-click="maximize()" aria-label="">  MAXIMIZE  
 				</md-button>
-				<md-button class="md-raised md-primary" ng-click="" aria-label="">  MINIMIZE  
+				<md-button class="md-raised md-primary" ng-click="minimize()" aria-label="">  MINIMIZE  
 				</md-button>
 				<span flex> </span>
-				<md-button class="md-raised md-primary" ng-click="" aria-label="">  CLEAR  
+				<md-button class="md-raised md-primary" ng-click="clear()" aria-label="">  CLEAR  
 				</md-button>
 			</div>
 		</div>
