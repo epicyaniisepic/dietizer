@@ -1,35 +1,26 @@
 <div class="body" ng-cloak layout-wrap ng-controller="DietCtrl">
-	<md-content class="md-padding">
+	<md-content class="md-padding" id="food-md-content">
 		<h2> Dietizer - Optimizes your food servings into a cheap price. </h2>
 		<p> Instructions: Click the chuchubels that you like and poof! Coco Crunch. </p>
-
-		<md-grid-list md-cols="4" md-row-height="4:3">
-			<md-grid-tile ng-repeat="food in foods">
-				<md-card>
-					<md-card-title>
-						<md-card-title-text>
-							<span class="md-subhead">  
-								{{food.Foods}}:<br>
-								{{food.PricePerServing}} ; {{food.ServingSize}}
-							</span>
-						</md-card-title-text>
-					</md-card-title>
-					<!-- <md-card-content></md-card-content> -->
-				</md-card>
-			</md-grid-tile>	
-		</md-grid-list>
-			
-		
-		
-		<!-- <div ng-repeat="food in foods">
-			<p> {{food.Foods}} </p>
-			<p> {{food.PricePerServing}} </p>
-			<p> {{food.ServingSize}} </p>
-		</div> -->
-
-
-		<div class="diet-output md-padding">
-			<h3> Output: </h3>
+		<div id="food-grid">
+			<md-grid-list md-cols="4" md-row-height="4:3">
+				<md-grid-tile ng-repeat="food in foods">
+					<md-card>
+						<md-card-title>
+							<md-card-title-text>
+								<span class="md-subhead">  
+									{{food.Foods}}:<br>
+									{{food.PricePerServing}} ; {{food.ServingSize}}
+								</span>
+							</md-card-title-text>
+						</md-card-title>
+						<!-- <md-card-content></md-card-content> -->
+					</md-card>
+				</md-grid-tile>	
+			</md-grid-list>
 		</div>
 	</md-content>
+	<div class="diet-output md-padding">
+		<h3> Output: </h3>
+	</div>
 </div>
