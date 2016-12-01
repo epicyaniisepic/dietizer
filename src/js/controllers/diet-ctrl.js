@@ -1,7 +1,16 @@
-var app = angular.module('main', []);
-	app.controller('DietCtrl', function ($scope, $http){
-		$http.get('src/js/foods.json').success(function(data) {
+(function() {
+
+	'use strict';	
+	angular
+		.module('main')
+		.controller('DietCtrl', DietCtrl);
+	
+	DietCtrl.$inject = ['$scope', '$http']
+
+	function DietCtrl($scope, $http) {
+		$http.get('foods.json').success(function(data) {
 		// $scope.countries = data;
 		$scope.foods = data;
 		});
-	});
+	};
+})();
